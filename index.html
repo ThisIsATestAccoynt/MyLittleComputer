@@ -9,10 +9,24 @@
     <div id="assistant-container">
       <img src="clippy.svg" alt="Desktop Assistant" id="assistant-avatar">
       <div id="fact-bubble">
+        <button id="close-btn">x</button>
         <p id="fact-text">Hello! I'm here to help you with your computer.</p>
       </div>
     </div>
-    <div id="settings-container">
+    <div id="welcome-container" class="hidden">
+      <p>Please select your operating system:</p>
+      <select id="welcome-os-select">
+        <option value="general">General</option>
+        <option value="windows7">Windows 7</option>
+        <option value="windows8">Windows 8</option>
+        <option value="windows10">Windows 10</option>
+        <option value="windows11">Windows 11</option>
+        <option value="macos">macOS</option>
+        <option value="linux">Linux</option>
+      </select>
+      <button id="save-os-btn">Save</button>
+    </div>
+    <div id="settings-container" class="hidden">
       <select id="os-select">
         <option value="general">General</option>
         <option value="windows7">Windows 7</option>

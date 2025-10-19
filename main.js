@@ -1,10 +1,13 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, ipcMain } = require('electron')
 const path = require('path')
 
 function createWindow () {
   const win = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 400,
+    height: 300,
+    frame: false,
+    transparent: true,
+    alwaysOnTop: true,
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
@@ -14,6 +17,10 @@ function createWindow () {
 
   win.loadFile('index.html')
 }
+
+ipcMain.on('close-app', () => {
+  app.quit()
+})
 
 app.whenReady().then(createWindow)
 
