@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Desktop Assistant</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="assistant-container">
+      <img src="https://upload.wikimedia.org/wikipedia/en/a/a0/Clippy.svg" alt="Desktop Assistant" id="assistant-avatar">
+      <div id="fact-bubble">
+        <p id="fact-text">Hello! I'm here to help you with your computer.</p>
+      </div>
+    </div>
+    <div id="settings-container">
+      <select id="os-select">
+        <option value="windows">Windows</option>
+        <option value="macos">macOS</option>
+        <option value="linux">Linux</option>
+      </select>
+      <input type="file" id="logo-upload" accept="image/*">
+    </div>
+    <script src="renderer.js"></script>
+  </body>
+</html>
