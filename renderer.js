@@ -1,4 +1,3 @@
-const { getRandomFact } = require('./facts');
 
 window.addEventListener('DOMContentLoaded', () => {
   const factText = document.getElementById('fact-text');
@@ -8,7 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   function updateFact() {
     const selectedOs = osSelect.value;
-    factText.innerText = getRandomFact(selectedOs);
+    factText.innerText = window.api.getRandomFact(selectedOs);
   }
 
   // Initial fact
